@@ -3,7 +3,7 @@ import io.gitlab.arturbosch.detekt.extensions.DetektExtension
 
 plugins {
     kotlin("multiplatform") version "2.0.20-RC"
-    id("io.gitlab.arturbosch.detekt") version "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:main-SNAPSHOT"
+    id("io.gitlab.arturbosch.detekt") version "main-SNAPSHOT"
 }
 
 detekt {
