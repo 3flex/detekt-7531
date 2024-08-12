@@ -15,6 +15,10 @@ plugins {
 }
 plugins.apply("io.gitlab.arturbosch.detekt")
 
+detekt {
+    debug = true
+}
+
 repositories {
     mavenCentral()
     maven(url="https://oss.sonatype.org/content/repositories/snapshots/")
