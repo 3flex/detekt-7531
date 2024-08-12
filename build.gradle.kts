@@ -11,7 +11,9 @@ buildscript {
 }
 
 plugins {
-    kotlin("multiplatform") version "2.0.20-RC"
+    val ktVersion= "2.0.20-RC"
+    kotlin("multiplatform") version ktVersion
+    kotlin("plugin.serialization") version ktVersion
 }
 plugins.apply("io.gitlab.arturbosch.detekt")
 
@@ -31,4 +33,11 @@ kotlin {
 
 tasks.register("allDetekt") {
     dependsOn(tasks.withType<Detekt>())
+}
+dependencies {
+    commonMainImplementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.1")
+}
+
+extensions.configure(DetektExtension::class.java) {
+    debug = true
 }
